@@ -7,6 +7,7 @@ class MyDocument extends Document {
   static async getInitialProps({ renderPage }) {
     const { html, css } = StyleSheetServer.renderStatic(() => renderPage());
     const ids = css.renderedClassNames;
+    console.log(ids)
     return { ...html, css, ids };
   }
 
